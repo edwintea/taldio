@@ -1,0 +1,855 @@
+{
+	"info": {
+		"_postman_id": "b9b5bab8-0f13-4ce8-ae3d-a7b8e5717de4",
+		"name": "Talent",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "519342",
+		"_collection_link": "https://taldio-team.postman.co/workspace/f12f1f42-718e-4a0e-861f-b6bdc9d9be7a/collection/11832385-b9b5bab8-0f13-4ce8-ae3d-a7b8e5717de4?action=share&creator=519342&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "TEST",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Register/Login Talent (with google)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"email\",\n    \"email\": \"zakaria.wicaksono@gmail.com\",\n    \"imageUrl\": \"sdfdsf\",\n    \"tokenGoogle\":\"sdfsdfsdfvvv\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/token/logingooglemobile",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"token",
+						"logingooglemobile"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "invalid tokenID",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"email\",\n    \"email\": \"zakaria.wicaksono@gmail.com\",\n    \"imageUrl\": \"sdfdsf\",\n    \"tokenGoogle\":\"sdfsdfsdfvvv\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/token/logingooglemobile",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"token",
+								"logingooglemobile"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "missmatch token & email",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"email\",\n    \"email\": \"zakaria.wicaksono@gmail.com\",\n    \"imageUrl\": \"sdfdsf\",\n    \"tokenGoogle\":\"sdfsdfsdfvvv\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/token/logingooglemobile",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"token",
+								"logingooglemobile"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Register Talent (with google)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"email\",\n    \"email\": \"zakaria.wicaksono@gmail.com\",\n    \"imageUrl\": \"sdfdsf\",\n    \"tokenGoogle\":\"sdfsdfsdfvvv\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/logingooglemobile",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"logingooglemobile"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Register Talent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Personal_FullName\": \"\",\r\n    \"Personal_Email\": \"\",\r\n    \"Password\": \"\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/token/newaccountjp",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"token",
+						"newaccountjp"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Register - valid",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Personal_FullName\": \"\",\r\n    \"Personal_Email\": \"\",\r\n    \"Password\": \"\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/token/newaccountjp",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"token",
+								"newaccountjp"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Register - exist not verif",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Personal_FullName\": \"zckwzk15@gmail.com\",\r\n    \"Personal_Email\": \"\",\r\n    \"Password\": \"\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/token/newaccountjp",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"token",
+								"newaccountjp"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Register - already exist",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Personal_FullName\": \"zakaria wicaksono\",\r\n    \"Personal_Email\": \"zakaria.wicaksono@gmail.com\",\r\n    \"Password\": \"\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/token/newaccountjp",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"token",
+								"newaccountjp"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"UserName\":\"user\",\n    \"Password\":\"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/token",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"token"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login - valid",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"UserName\":\"zckwzk15@gmail.com\",\n    \"Password\":\"N@wadata15\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/token",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"token"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Login - wrong password",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"UserName\":\"user\",\n    \"Password\":\"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/token",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"token"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Login - unregistered email",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"UserName\":\"user\",\n    \"Password\":\"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/token",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"token"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Login - Not Verfied",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"UserName\":\"user\",\n    \"Password\":\"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/token",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"token"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Login using token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJJbnZlbnRvcnlTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiJiNmY1YjY3Ni1kYmZjLTQwM2QtOThmOC1iMDhkOWZkMzZlZmQiLCJpYXQiOiI4LzEwLzIwMjMgNDoxMzo1NiBBTSIsIlBLX0FjY291bnQiOiI4OCIsIkVtYWlsIjoiemNrd3prMTVAZ21haWwuY29tIiwiTmFtZSI6Inpha2FyaWEiLCJQS19QZXJzb25hbERhdGEiOiI4OCIsIkFuc3dlciI6IiIsIlVzZXJuYW1lIjoiemNrd3prMTVAZ21haWwuY29tIiwiZXhwIjoxNjkxNzI3MjM2LCJpc3MiOiJJbnZlbnRvcnlBdXRoZW50aWNhdGlvblNlcnZlciIsImF1ZCI6IkludmVudG9yeUF1dGhlbnRpY2F0aW9uU2VydmVyIn0.oObdrq1QCUMXVl39B91DaQWZcSG4IPDwen2UPt1-NQo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/token",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Forgot Password (Request OTP to Email)",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "request otp - not found account",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/token/requestotp?username=z@mailt.com",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"token",
+								"requestotp"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "z@mailt.com"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "request otp - email not verified",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/token/requestotp?username=z@mailt.com",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"token",
+								"requestotp"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "z@mailt.com"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "request otp - valid",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/token/requestotp?username=zakaria.wicaksono@gmail.com",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"token",
+								"requestotp"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "zakaria.wicaksono@gmail.com"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Validate OTP",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"UserName\":\"zakaria.wicaksono@gmail.com\",\n    \"Password\":\"1235\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/token/loginotp",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"token",
+								"loginotp"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Validate OTP Invalid",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"UserName\":\"zakaria.wicaksono@gmail.com\",\n    \"Password\":\"1235\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/token/loginotp",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"token",
+								"loginotp"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Reset Password",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "sdfsdfsdf",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"OldPassword\":\"OldPassword\",\n    \"NewPassword\":\"NewPassword\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/token/ForceChangePassword",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"token",
+								"ForceChangePassword"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Reset Password Copy",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "sdfsdfsdf",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"OldPassword\":\"OldPassword\",\n    \"NewPassword\":\"NewPassword\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/token/ForceChangePassword",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"token",
+								"ForceChangePassword"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Resend Email",
+					"originalRequest": {
+						"method": "GET",
+						"header": []
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Resend Email Verification",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/token//resendEmail?email=zakaria.wicaksono@gmail.com",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"token",
+						"",
+						"resendEmail"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "zakaria.wicaksono@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Job",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "job - authorize",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/joblist?search=&type=1&page=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"joblist"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": ""
+								},
+								{
+									"key": "type",
+									"value": "1"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "General Data (Province, Gender, MarriageStatus, Religion, WorkingType, StatusTalent, JobRole, PhoneCodes)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/generaldata",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"generaldata"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Skill&Language",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/generaldata/hardskilllanguage",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"generaldata",
+						"hardskilllanguage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Personal Data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"PK_PersonalData\": 1,\r\n  \"Personal_Fullname\": \"Zakaria Wicaksono\",\r\n  \"FK_Gender\": \"\",\r\n  \"Personal_PhoneNumber\": \"8558949946646\",\r\n  \"NIK\": \"6767667946464646\",\r\n  \"Personal_Address\": \"Pancar RT 003 RW 001, Ngampeldento\",\r\n  \"FK_MaritalStatus\": \"\",\r\n  \"Personal_Religion\": \"\",\r\n  \"Personal_Email\": \"zakaria.wicaksono@gmail.com\",\r\n  \"Personal_HomePhone\": \"\",\r\n  \"Personal_DOB\": \"1995-07-03 00:00:00.000\",\r\n  \"Personal_BirthPlace\": \"\",\r\n  \"Personal_Nickname\": \"Zaka\",\r\n  \"FK_JobRole\": \"3\",\r\n  \"Salary_Min\": \"25000000\",\r\n  \"Personal_Summary\": \"mobile dev, react native\",\r\n  \"City_Code\": \"K181\",\r\n  \"Province_Code\": \"P013\",\r\n  \"Post_Code\": \"56162\",\r\n  \"Salary_Max\": \"30000000\",\r\n  \"FK_PhoneCode\": \"100\",\r\n  \"District_Code\": \"D02779\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/PersonalDataWeb/UpdatePersonalDataWeb",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"PersonalDataWeb",
+						"UpdatePersonalDataWeb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "First Sign In",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"TalentStatus\": {\r\n      \"value\":\"6\"\r\n  },\r\n  \"JobRoles\":[\r\n     {\r\n         \"PK_PersonalJobRole\": \"0\",\r\n         \"PersonalJobRole_name\": \"test\",\r\n         \"FK_JobRole\": \"1\"\r\n     }\r\n  ],\r\n  \"WorkLocations\": [\r\n      {\r\n          \"FK_WorkingType\": \"1\",\r\n          \"PersonalWorking_name\": \"3\"\r\n      }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/userprofile/signininfo?id=88",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"userprofile",
+						"signininfo"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "88"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get First Sign In Info",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
